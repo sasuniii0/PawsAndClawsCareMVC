@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="956.0" prefWidth="1173.0" style="-fx-background-color: #1F1F1F;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pawsandclawscare.controller.ServicesController">
+   <children>
+      <VBox layoutX="21.0" layoutY="96.0" prefHeight="854.0" prefWidth="1138.0" spacing="15.0">
+         <children>
+            <HBox prefHeight="46.0" prefWidth="1059.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="256.0" text="Service Id" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <Label fx:id="LblServiceId" prefHeight="18.0" prefWidth="256.0" text="1" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="1059.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="249.0" text="Availability" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtAvailability" prefHeight="26.0" prefWidth="442.0" promptText="eaxmple" style="-fx-background-radius: 25;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="1059.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="249.0" text="Description" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtDesc" prefHeight="26.0" prefWidth="444.0" promptText="example" style="-fx-background-radius: 25;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="1059.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="247.0" text="Duration" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtDuration" prefHeight="26.0" prefWidth="447.0" promptText="example" style="-fx-background-radius: 25;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="1059.0" style="-fx-background-radius: 25;">
+               <children>
+                  <Label prefHeight="38.0" prefWidth="248.0" text="Price" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtPrice" prefHeight="41.0" prefWidth="448.0" promptText="0.0" style="-fx-background-radius: 25;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="55.0" prefWidth="1059.0" spacing="30.0">
+               <children>
+                  <Button fx:id="BtnReset" mnemonicParsing="false" onAction="#ResetBtnOnClickAction" prefHeight="57.0" prefWidth="359.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 25;" text="Reset" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnDelete" mnemonicParsing="false" onAction="#DeleteBtnOnClickAction" prefHeight="57.0" prefWidth="387.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 25;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnUpdate" mnemonicParsing="false" onAction="#UpdateBtnOnClickAction" prefHeight="57.0" prefWidth="354.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 25;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnSave" mnemonicParsing="false" onAction="#SaveBtnOnClickAction" prefHeight="57.0" prefWidth="352.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 25;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <TableView fx:id="TblService" onMouseClicked="#TblServiceOnClick" prefHeight="313.0" prefWidth="1138.0">
+              <columns>
+                <TableColumn fx:id="ColServiceId" prefWidth="115.0" text="Service Id" />
+                <TableColumn fx:id="ColAvailability" prefWidth="143.0" text="Availability" />
+                  <TableColumn fx:id="ColDesc" prefWidth="324.0" text="Description" />
+                  <TableColumn fx:id="ColDuration" prefWidth="248.0" text="Duration" />
+                  <TableColumn fx:id="ColPrice" prefWidth="307.0" text="Price" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="36.0" prefWidth="1059.0" />
+         </children>
+      </VBox>
+      <Label layoutX="397.0" layoutY="14.0" prefHeight="18.0" prefWidth="393.0" text="Service Management" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="46.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="48.0" prefHeight="6.0" prefWidth="377.0" />
+      <Separator layoutX="806.0" layoutY="50.0" prefHeight="6.0" prefWidth="353.0" />
+   </children>
+</AnchorPane>

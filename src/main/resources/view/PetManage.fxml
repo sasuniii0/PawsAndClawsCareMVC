@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="956.0" prefWidth="1173.0" style="-fx-background-color: #1F1F1F;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pawsandclawscare.controller.PetManageController">
+   <children>
+      <VBox layoutX="18.0" layoutY="73.0" prefHeight="872.0" prefWidth="1143.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="51.0" prefWidth="1143.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="169.0" text="Pet Id" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <Label fx:id="LblPetId" prefHeight="18.0" prefWidth="397.0" text="1" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="1054.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="165.0" text="Name" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtName" prefHeight="26.0" prefWidth="422.0" promptText="example" style="-fx-background-radius: 20;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="1054.0">
+               <children>
+                  <Label prefHeight="38.0" prefWidth="167.0" text="Breed" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtBreed" prefHeight="41.0" prefWidth="418.0" promptText="example" style="-fx-background-radius: 20;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="69.0" prefWidth="1054.0" spacing="10.0">
+               <children>
+                  <Button fx:id="BtnReset" mnemonicParsing="false" onAction="#ResetBtnOnClickAction" prefHeight="57.0" prefWidth="365.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 25;" text="Reset" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnUpdate" mnemonicParsing="false" onAction="#UpdateBtnOnClickAction" prefHeight="57.0" prefWidth="400.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 25;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnDelete" mnemonicParsing="false" onAction="#DeleteBtnOnClickAction" prefHeight="57.0" prefWidth="376.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 25;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnSave" mnemonicParsing="false" onAction="#SaveBtnOnClickAction" prefHeight="57.0" prefWidth="398.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 25;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="1138.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="TxtSearchPetName" prefHeight="26.0" prefWidth="502.0" promptText="Enter Pet Name" style="-fx-background-radius: 25;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="19.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="BtnSearch" mnemonicParsing="false" onAction="#BtnSearchOnClickAction" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 25;" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font>
+                  </Button>
+               </children></HBox>
+            <TableView fx:id="TblPet" onMouseClicked="#TblOnClick" prefHeight="358.0" prefWidth="1054.0">
+              <columns>
+                <TableColumn fx:id="ColPetId" prefWidth="350.0" text="Pet Id" />
+                  <TableColumn fx:id="ColName" prefWidth="364.0" text="Name" />
+                  <TableColumn fx:id="ColBreed" minWidth="0.0" prefWidth="428.0" text="Breed" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="40.0" prefWidth="1054.0">
+               <children>
+                  <Button fx:id="BtnGenerateRep" mnemonicParsing="false" onAction="#GenerateRepClickOnAction" prefHeight="39.0" prefWidth="1146.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 25;" text="Generate Pet Report" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="398.0" layoutY="14.0" prefHeight="77.0" prefWidth="418.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="55.0" prefWidth="433.0" text="Pet Management" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="46.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Separator layoutX="14.0" layoutY="54.0" prefHeight="0.0" prefWidth="422.0" />
+      <Separator layoutX="793.0" layoutY="54.0" prefHeight="3.0" prefWidth="372.0" />
+   </children>
+</AnchorPane>

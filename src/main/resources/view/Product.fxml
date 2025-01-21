@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="956.0" prefWidth="1173.0" style="-fx-background-color: #1F1F1F;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pawsandclawscare.controller.ProductManageController">
+   <children>
+      <VBox layoutX="19.0" layoutY="83.0" prefHeight="851.0" prefWidth="1146.0" spacing="20.0">
+         <children>
+            <HBox prefHeight="51.0" prefWidth="684.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="155.0" text="Product Id" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <Label fx:id="LblProId" prefHeight="34.0" prefWidth="264.0" text="1" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="684.0">
+               <children>
+                  <Label fx:id="LblProName" prefHeight="18.0" prefWidth="149.0" text="Product Name" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="23.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtProName" prefHeight="41.0" prefWidth="996.0" promptText="example" style="-fx-background-radius: 30;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="684.0">
+               <children>
+                  <Label fx:id="LblDesc" prefHeight="18.0" prefWidth="151.0" text="Description" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtDesc" prefHeight="41.0" prefWidth="993.0" promptText="example" style="-fx-background-radius: 30;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="684.0" spacing="10.0">
+               <children>
+                  <Label fx:id="LblPrice" prefHeight="38.0" prefWidth="142.0" text="Price" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtPrice" prefHeight="41.0" prefWidth="249.0" promptText="0.0" style="-fx-background-radius: 30;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+                  <Label fx:id="LblQty" prefHeight="18.0" prefWidth="89.0" text="Qty" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtQty" prefHeight="41.0" prefWidth="314.0" promptText="0" style="-fx-background-radius: 30;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="51.0" prefWidth="684.0" spacing="20.0">
+               <children>
+                  <Button fx:id="BtnReset" mnemonicParsing="false" onAction="#ResetOnClickAction" prefHeight="57.0" prefWidth="277.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Reset " textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnDelete" mnemonicParsing="false" onAction="#DeleteOnClickAction" prefHeight="57.0" prefWidth="317.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnUpdate" mnemonicParsing="false" onAction="#UpdateOnClickAction" prefHeight="57.0" prefWidth="273.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnSave" mnemonicParsing="false" onAction="#SaveOnClickAction" prefHeight="57.0" prefWidth="275.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="684.0">
+               <children>
+                  <TextField fx:id="TxtSearchProduct" prefHeight="26.0" prefWidth="600.0" promptText="Enter the Product Category">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="BtnSearch" mnemonicParsing="false" onAction="#BtnSearchOnClickAction" prefHeight="40.0" prefWidth="138.0" style="-fx-background-color: #3B3B98;" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="TblProduct" onMouseClicked="#TblProductOnClick" prefHeight="311.0" prefWidth="1146.0">
+              <columns>
+                <TableColumn fx:id="ColProId" prefWidth="75.0" text="ProId" />
+                <TableColumn fx:id="ColProName" prefWidth="260.0" text="ProName" />
+                  <TableColumn fx:id="ColDesc" prefWidth="399.0" text="Description" />
+                  <TableColumn fx:id="ColPrice" prefWidth="171.0" text="Price" />
+                  <TableColumn fx:id="ColQty" prefWidth="240.0" text="Qty" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="60.0" prefWidth="1141.0">
+               <children>
+                  <Button fx:id="BtnGenerateAllProductsRep11" mnemonicParsing="false" onAction="#GenerateAllProductRepOnClickAction" prefHeight="57.0" prefWidth="1154.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Generate All Products Report" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="394.0" layoutY="14.0" prefHeight="77.0" prefWidth="422.0" text="Product Management" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="46.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="51.0" prefHeight="3.0" prefWidth="370.0" />
+      <Separator layoutX="816.0" layoutY="53.0" prefHeight="3.0" prefWidth="339.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="950.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pawsandclawscare.controller.verifyAccController">
+   <children>
+      <ImageView fitHeight="964.0" fitWidth="1550.0">
+         <image>
+            <Image url="@../images/pic3.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="SignInPane" layoutX="1005.0" layoutY="201.0" prefHeight="585.0" prefWidth="469.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <Button fx:id="BtnVerify" layoutX="164.0" layoutY="333.0" mnemonicParsing="false" onAction="#BtnVerifyOnAction" prefHeight="51.0" prefWidth="156.0" style="-fx-background-radius: 25; -fx-background-color: #1F1F1F;" text="Verify" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="25.0" />
+               </font>
+            </Button>
+            <HBox layoutX="48.0" layoutY="123.0" prefHeight="30.0" prefWidth="387.0" />
+            <HBox layoutX="48.0" layoutY="193.0" prefHeight="30.0" prefWidth="387.0">
+               <children>
+                  <TextField fx:id="TxtCode" onAction="#TxtCodeOnAction" prefHeight="30.0" prefWidth="389.0" promptText="Code" style="-fx-background-radius: 25;">
+                     <font>
+                        <Font name="Dyuthi Regular" size="17.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label layoutX="62.0" layoutY="68.0" prefHeight="70.0" prefWidth="353.0" text="Verify Your Account">
+               <font>
+                  <Font name="Dyuthi Regular" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="ShowLblId" layoutX="71.0" layoutY="241.0" prefHeight="18.0" prefWidth="85.0" />
+            <Hyperlink fx:id="HypeChange" layoutX="62.0" layoutY="162.0" onAction="#HypeChangeOnAction" text="change" />
+            <Text layoutX="62.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sample@gmail.com" wrappingWidth="188.13000106811523" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="980.0" layoutY="93.0" prefHeight="84.0" prefWidth="520.0" text="Paws &amp; Claws Care" textFill="#fcfcfc">
+         <font>
+            <Font name="Dyuthi Regular" size="65.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

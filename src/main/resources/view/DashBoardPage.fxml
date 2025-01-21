@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="950.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pawsandclawscare.controller.DashBoardPageController">
+   <children>
+      <AnchorPane fx:id="ancPaneLoad" layoutX="377.0" prefHeight="956.0" prefWidth="1173.0" style="-fx-background-color: #1F1F1F;" />
+      <Pane fx:id="dashboardLoadPane" prefHeight="950.0" prefWidth="375.0" />
+      <ImageView fitHeight="956.0" fitWidth="375.0">
+         <image>
+            <Image url="@../images/ffffffffffffffffffffffffffffffffffffffffff.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="LblDash" layoutX="79.0" layoutY="14.0" onMouseClicked="#LblDashOnAction" prefHeight="64.0" prefWidth="242.0" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="51.0" />
+         </font>
+      </Label>
+      <VBox layoutX="32.0" layoutY="112.0" prefHeight="747.0" prefWidth="311.0" spacing="15.0">
+         <children>
+            <Button fx:id="btnCustomerManage" mnemonicParsing="false" onAction="#customerManageOnClickAction" prefHeight="45.0" prefWidth="307.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Customer Manage">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="41.0">
+                     <image>
+                        <Image url="@../images/custtt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnProductManage" mnemonicParsing="false" onAction="#productManageOnClickAction" prefHeight="43.0" prefWidth="307.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Product Manage">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="43.0">
+                     <image>
+                        <Image url="@../images/prooo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnOrderManage" mnemonicParsing="false" onAction="#orderManageOnClickAction" prefHeight="47.0" prefWidth="307.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Orders Manage">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="48.0">
+                     <image>
+                        <Image url="@../images/orrrrrrrrr.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnSupManage" mnemonicParsing="false" onAction="#supManageOnClickAction" prefHeight="39.0" prefWidth="307.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Supplier Manage">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../images/supplier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReservation" mnemonicParsing="false" onAction="#reservationOnClickAction" prefHeight="45.0" prefWidth="307.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Reservation Manage">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="36.0">
+                     <image>
+                        <Image url="@../images/reservation.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEmpManage" mnemonicParsing="false" onAction="#empManageOnClickAction" prefHeight="32.0" prefWidth="307.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Employee Manage">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="36.0">
+                     <image>
+                        <Image url="@../images/employee.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnServices" mnemonicParsing="false" onAction="#serviceManageOnClickAction" prefHeight="31.0" prefWidth="307.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Services Manage">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="48.0">
+                     <image>
+                        <Image url="@../images/service.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="BtnPaymentManage" mnemonicParsing="false" onAction="#BtnPaymentManageOnAction" prefHeight="51.0" prefWidth="307.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Payment Manage">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="48.0">
+                     <image>
+                        <Image url="@../images/payyyy.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnInvenManage" lineSpacing="10.0" mnemonicParsing="false" onAction="#invenManageOnClickAction" prefHeight="40.0" prefWidth="307.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Inventory Manage">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="40.0">
+                     <image>
+                        <Image url="@../images/inventory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnPetManage" mnemonicParsing="false" onAction="#petManageOnClickAction" prefHeight="39.0" prefWidth="307.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="Pet Manage">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="32.0">
+                     <image>
+                        <Image url="@../images/petOrgin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Button fx:id="BtnLogOut" alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="865.0" mnemonicParsing="false" onAction="#BtnLogOutOnClickAction" prefHeight="47.0" prefWidth="97.0" style="-fx-background-color: red; -fx-background-radius: 25;" text="LogOut">
+         <font>
+            <Font name="Dyuthi Regular" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

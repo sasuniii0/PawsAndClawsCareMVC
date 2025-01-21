@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="956.0" prefWidth="1173.0" style="-fx-background-color: #1F1F1F;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pawsandclawscare.controller.CustomerManageController">
+   <children>
+      <VBox layoutX="15.0" layoutY="92.0" prefHeight="839.0" prefWidth="1123.0" spacing="20.0" stylesheets="@../style/styles.css" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="92.0">
+         <children>
+            <HBox prefHeight="58.0" prefWidth="1450.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="252.0" text="Customer Id" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <Label fx:id="LblCustId" prefHeight="28.0" prefWidth="545.0" text="1" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Label>
+                  <Button fx:id="BtnSearchCustomer" mnemonicParsing="false" onAction="#BtnSearchCustomerOnClickAction" prefHeight="26.0" prefWidth="317.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Search Customer" textFill="WHITE">
+                     <font>
+                        <Font name="Dyuthi Regular" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="61.0" prefWidth="1450.0">
+               <children>
+                  <Label fx:id="LblCustName" prefHeight="42.0" prefWidth="597.0" text="Customer Name" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtCustomerName" prefHeight="35.0" prefWidth="1220.0" promptText="example" style="-fx-background-radius: 30;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="59.0" prefWidth="1450.0">
+               <children>
+                  <Label fx:id="LblAddress" prefHeight="35.0" prefWidth="268.0" text="Address" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="22.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtAddress" prefHeight="33.0" prefWidth="892.0" promptText="exampleRoad" style="-fx-background-radius: 30;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="1450.0">
+               <children>
+                  <Label fx:id="LblEmail" prefHeight="35.0" prefWidth="273.0" text="Email" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtEmail" prefHeight="33.0" prefWidth="904.0" promptText="example@gmail.com" style="-fx-background-radius: 30;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="61.0" prefWidth="1450.0">
+               <children>
+                  <Label fx:id="LblContactNumber" prefHeight="41.0" prefWidth="569.0" text="Contact" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Label>
+                  <TextField fx:id="TxtContactNumber" prefHeight="36.0" prefWidth="1201.0" promptText="0xxxxxxxxx" style="-fx-background-radius: 30;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="18.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="32.0" prefWidth="1123.0" spacing="25.0">
+               <children>
+                  <Button fx:id="BtnReset" mnemonicParsing="false" onAction="#ResetOnClickAction" prefHeight="41.0" prefWidth="255.0" style="-fx-background-radius: 30; -fx-background-color: #3B3B98;" text="Reset" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnDelete" mnemonicParsing="false" onAction="#DeleteOnClickAction" prefHeight="41.0" prefWidth="284.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Delete" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="BtnUpdate" mnemonicParsing="false" onAction="#UpdateOnClickAction" prefHeight="41.0" prefWidth="241.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Update" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="23.0" />
+                     </font></Button>
+                  <Button fx:id="BtnSave" mnemonicParsing="false" onAction="#SaveOnClickAction" prefHeight="39.0" prefWidth="245.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Save" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="23.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <TableView fx:id="TblCustomer" onMouseClicked="#TableOnClickAction" prefHeight="340.0" prefWidth="1123.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="ColCustId" prefWidth="127.0" text="Cust Id" />
+                <TableColumn fx:id="ColCustName" prefWidth="232.0" text="Cust Name" />
+                  <TableColumn fx:id="ColAddress" prefWidth="223.0" text="Address" />
+                  <TableColumn fx:id="ColEmail" prefWidth="272.0" text="Email" />
+                  <TableColumn fx:id="ColContactNumber" prefWidth="268.0" text="Contact Number" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="65.0" prefWidth="1450.0" spacing="30.0">
+               <children>
+                  <Button fx:id="BtnGenerateAllCustomers" mnemonicParsing="false" onAction="#GenerateAllCustomerOnClickAction" prefHeight="46.0" prefWidth="590.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Generate All Customer Report" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BtnSendMail" mnemonicParsing="false" onAction="#SendMailOnClickAction" prefHeight="46.0" prefWidth="694.0" style="-fx-background-color: #3B3B98; -fx-background-radius: 30;" text="Open Mail And Send Mail" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Dyuthi Regular" size="23.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="384.0" layoutY="18.0" prefHeight="58.0" prefWidth="440.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="449.0" text="Customer Management" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="46.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Separator layoutX="14.0" layoutY="58.0" prefHeight="0.0" prefWidth="359.0" />
+      <Separator layoutX="833.0" layoutY="46.0" prefHeight="28.0" prefWidth="340.0" />
+   </children>
+</AnchorPane>
