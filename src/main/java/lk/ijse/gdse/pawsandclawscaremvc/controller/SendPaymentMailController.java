@@ -57,7 +57,7 @@ public class SendPaymentMailController {
 
     private void sendEmailWithSendgrid(String from, String to, String subject, String body) {
         final String USER_NAME = "apikey"; // SendGrid's requirement
-        final String PASSWORD = "replace api key";
+        final String PASSWORD = "  replace api key  ";
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
