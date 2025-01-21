@@ -11,12 +11,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
-import org.example.pawsandclawscare.dto.EmployeeDto;
-import org.example.pawsandclawscare.dto.tm.EmployeeTm;
-import org.example.pawsandclawscare.model.EmpManageModel;
-import org.example.pawsandclawscare.model.OrderManageModel;
-import org.example.pawsandclawscare.model.ServiceModel;
-
+import lk.ijse.gdse.pawsandclawscaremvc.dto.EmployeeDto;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.tm.EmployeeTm;
+import lk.ijse.gdse.pawsandclawscaremvc.model.EmpManageModel;
+import lk.ijse.gdse.pawsandclawscaremvc.model.OrderManageModel;
+import lk.ijse.gdse.pawsandclawscaremvc.model.ServiceModel;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;

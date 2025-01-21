@@ -13,10 +13,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import org.example.pawsandclawscare.db.DataBase;
-import org.example.pawsandclawscare.dto.UserDto;
-import org.example.pawsandclawscare.model.UserModel;
-
+import lk.ijse.gdse.pawsandclawscaremvc.db.Database;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.UserDto;
+import lk.ijse.gdse.pawsandclawscaremvc.model.UserModel;
 import java.io.IOException;
 import java.util.Optional;
 

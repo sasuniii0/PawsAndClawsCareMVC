@@ -20,11 +20,10 @@ import javafx.util.Callback;
 import javafx.util.Duration;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.view.JasperViewer;
-import org.example.pawsandclawscare.db.DBConnection;
-import org.example.pawsandclawscare.dto.ProductDto;
-import org.example.pawsandclawscare.dto.tm.ProductTm;
-import org.example.pawsandclawscare.model.ProductManageModel;
-
+import lk.ijse.gdse.pawsandclawscaremvc.db.DBConnection;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.ProductDto;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.tm.ProductTm;
+import lk.ijse.gdse.pawsandclawscaremvc.model.ProductManageModel;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;

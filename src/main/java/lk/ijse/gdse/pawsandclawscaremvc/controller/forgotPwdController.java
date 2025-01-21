@@ -10,8 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import util.security.VerificationCodeGenerator;
-
+import lk.ijse.gdse.pawsandclawscaremvc.util.security.VerificationCodeGenerator;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;

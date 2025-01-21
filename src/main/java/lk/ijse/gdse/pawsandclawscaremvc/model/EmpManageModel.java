@@ -2,8 +2,8 @@ package lk.ijse.gdse.pawsandclawscaremvc.model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import org.example.pawsandclawscare.dto.EmployeeDto;
-import util.CrudUtil;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.EmployeeDto ;
+import lk.ijse.gdse.pawsandclawscaremvc.util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

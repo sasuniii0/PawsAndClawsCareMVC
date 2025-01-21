@@ -17,11 +17,10 @@ import javafx.stage.Window;
 import javafx.util.Callback;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.view.JasperViewer;
-import org.example.pawsandclawscare.db.DBConnection;
-import org.example.pawsandclawscare.dto.PaymentDto;
-import org.example.pawsandclawscare.dto.tm.PaymentTm;
-import org.example.pawsandclawscare.model.PaymentModel;
-
+import lk.ijse.gdse.pawsandclawscaremvc.db.DBConnection;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.PaymentDto;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.tm.PaymentTm;
+import lk.ijse.gdse.pawsandclawscaremvc.model.PaymentModel;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;

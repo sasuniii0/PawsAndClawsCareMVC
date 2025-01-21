@@ -1,7 +1,7 @@
 package lk.ijse.gdse.pawsandclawscaremvc.model;
 
-import org.example.pawsandclawscare.dto.OrderDetailsDto;
-import util.CrudUtil;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.OrderDetailsDto;
+import lk.ijse.gdse.pawsandclawscaremvc.util.CrudUtil;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

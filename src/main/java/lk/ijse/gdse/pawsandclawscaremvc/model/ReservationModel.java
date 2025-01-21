@@ -2,9 +2,9 @@ package lk.ijse.gdse.pawsandclawscaremvc.model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import org.example.pawsandclawscare.db.DBConnection;
-import org.example.pawsandclawscare.dto.ReservationDto;
-import util.CrudUtil;
+import lk.ijse.gdse.pawsandclawscaremvc.db.DBConnection;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.ReservationDto;
+import lk.ijse.gdse.pawsandclawscaremvc.util.CrudUtil;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

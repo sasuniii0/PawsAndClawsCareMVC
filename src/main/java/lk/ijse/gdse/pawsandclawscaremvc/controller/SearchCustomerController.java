@@ -7,9 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import org.example.pawsandclawscare.dto.CustomerDto;
-import org.example.pawsandclawscare.model.CustomerModel;
-
+import lk.ijse.gdse.pawsandclawscaremvc.dto.CustomerDto;
+import lk.ijse.gdse.pawsandclawscaremvc.model.CustomerModel;
 public class SearchCustomerController {
 
     @FXML

@@ -1,6 +1,6 @@
 package lk.ijse.gdse.pawsandclawscaremvc.model;
 
-import org.example.pawsandclawscare.db.DBConnection;
+import lk.ijse.gdse.pawsandclawscaremvc.db.DBConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -8,9 +8,8 @@ import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import org.example.pawsandclawscare.db.DBConnection;
-import org.example.pawsandclawscare.dto.UserDto;
-
+import lk.ijse.gdse.pawsandclawscaremvc.db.DBConnection;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.UserDto;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

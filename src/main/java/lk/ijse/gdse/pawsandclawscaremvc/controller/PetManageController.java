@@ -9,10 +9,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
-import org.example.pawsandclawscare.dto.PetDto;
-import org.example.pawsandclawscare.dto.tm.PetTm;
-import org.example.pawsandclawscare.model.PetManageModel;
-
+import lk.ijse.gdse.pawsandclawscaremvc.dto.PetDto;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.tm.PetTm;
+import lk.ijse.gdse.pawsandclawscaremvc.model.PetManageModel;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;

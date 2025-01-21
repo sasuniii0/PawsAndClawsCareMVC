@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="950.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pawsandclawscare.controller.DashBoardPageController">
+<AnchorPane fx:id="root" prefHeight="950.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.pawsandclawscaremvc.controller.DashBoardPageController">
    <children>
       <AnchorPane fx:id="ancPaneLoad" layoutX="377.0" prefHeight="956.0" prefWidth="1173.0" style="-fx-background-color: #1F1F1F;" />
       <Pane fx:id="dashboardLoadPane" prefHeight="950.0" prefWidth="375.0" />

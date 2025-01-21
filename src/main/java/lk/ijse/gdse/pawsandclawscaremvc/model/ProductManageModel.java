@@ -1,8 +1,8 @@
 package lk.ijse.gdse.pawsandclawscaremvc.model;
 
-import org.example.pawsandclawscare.dto.OrderDetailsDto;
-import org.example.pawsandclawscare.dto.ProductDto;
-import util.CrudUtil;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.OrderDetailsDto;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.ProductDto;
+import lk.ijse.gdse.pawsandclawscaremvc.util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

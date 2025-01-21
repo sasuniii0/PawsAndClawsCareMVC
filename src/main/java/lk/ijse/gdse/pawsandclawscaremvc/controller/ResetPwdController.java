@@ -9,8 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import org.example.pawsandclawscare.model.UserModel;
-
+import lk.ijse.gdse.pawsandclawscaremvc.model.UserModel;
 import java.io.IOException;
 
 public class ResetPwdController {
