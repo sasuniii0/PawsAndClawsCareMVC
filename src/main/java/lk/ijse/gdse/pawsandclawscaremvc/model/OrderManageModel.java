@@ -2,6 +2,7 @@ package lk.ijse.gdse.pawsandclawscaremvc.model;
 
 import lk.ijse.gdse.pawsandclawscaremvc.db.DBConnection;
 import lk.ijse.gdse.pawsandclawscaremvc.dto.OrderDetailsDto;
+import lk.ijse.gdse.pawsandclawscaremvc.dto.OrdersDto;
 import lk.ijse.gdse.pawsandclawscaremvc.util.CrudUtil;
 
 import java.sql.Connection;

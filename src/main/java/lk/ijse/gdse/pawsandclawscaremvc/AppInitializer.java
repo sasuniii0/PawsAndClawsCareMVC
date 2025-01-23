@@ -6,12 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
+import java.sql.SQLException;
 
 public class AppInitializer extends Application {
+    public static void main(String[] args) throws SQLException {
+        launch(args);
+    }
+
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws Exception {
         Parent load = FXMLLoader.load(getClass().getResource("/view/loading.fxml"));
         stage.setScene(new Scene(load));
         stage.show();
@@ -34,9 +37,7 @@ public class AppInitializer extends Application {
         });
 
         new Thread(loadingTask).start();
+
     }
 
-    public static void main(String[] args) {
-        launch();
-    }
 }

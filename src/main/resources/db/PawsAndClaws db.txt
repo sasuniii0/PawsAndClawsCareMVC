@@ -1,0 +1,145 @@
+DROP DATABASE IF EXISTS PawsAndClawsCare;
+CREATE DATABASE PawsAndClawsCare;
+
+CREATE TABLE Pet (
+    petId VARCHAR(20) NOT NULL PRIMARY KEY,
+    breed VARCHAR(100),
+    name VARCHAR(100)
+);
+CREATE TABLE Customer (
+    custId VARCHAR(20) NOT NULL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    address VARCHAR(255),
+    email VARCHAR(100) UNIQUE,
+    contactNumber VARCHAR(15),
+    petId VARCHAR(20),
+    CONSTRAINT fk_pet FOREIGN KEY (petId) REFERENCES Pet(petId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Orders (
+    orderId VARCHAR(20) NOT NULL PRIMARY KEY,
+    date DATE NOT NULL,
+    custId VARCHAR(20),
+    CONSTRAINT fk_customer FOREIGN KEY (custId) REFERENCES Customer(custId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Product (
+    proId VARCHAR(20) NOT NULL PRIMARY KEY,
+    name VARCHAR(100),
+    description VARCHAR(255),
+    price DECIMAL(10, 2),
+    inventoryId VARCHAR(20),
+    qty INT,
+    CONSTRAINT fk_product_inventory FOREIGN KEY (inventoryId) REFERENCES Inventory(inventoryId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Inventory (
+    inventoryId VARCHAR(20) NOT NULL PRIMARY KEY,
+    stockUpdate VARCHAR(100),
+    inventoryCategory VARCHAR(100),
+    availability VARCHAR(100),
+    supId VARCHAR(20),
+    CONSTRAINT fk_supplier FOREIGN KEY (supId) REFERENCES Supplier(supId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Supplier (
+    supId VARCHAR(20) NOT NULL PRIMARY KEY,
+    name VARCHAR(100),
+    contactNumber VARCHAR(15)
+);
+CREATE TABLE OrderDetail (
+    orderId VARCHAR(20) NOT NULL,
+    proId VARCHAR(20) NOT NULL,
+    quantity INT NOT NULL,
+    price DECIMAL(10, 2),
+    CONSTRAINT fk_orderDetail_order FOREIGN KEY (orderId) REFERENCES Orders(orderId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    CONSTRAINT fk_orderDetail_product FOREIGN KEY (proId) REFERENCES Product(proId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+CREATE TABLE Payment (
+    paymentId VARCHAR(20) NOT NULL PRIMARY KEY,
+    date DATE NOT NULL,
+    amount DECIMAL(10, 2),
+    method VARCHAR(50),
+    resId  VARCHAR(20),
+    orderId  VARCHAR(20),
+    CONSTRAINT fk_payment_reservation FOREIGN KEY (resId) REFERENCES Reservation(resId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    CONSTRAINT fk_payment_order FOREIGN KEY (orderId) REFERENCES Orders(orderId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+CREATE TABLE Reservation (
+    resId  VARCHAR(20) NOT NULL PRIMARY KEY,
+    dropOffTime TIME NOT NULL,
+    custId  VARCHAR(20),
+    date DATE NOT NULL,
+    CONSTRAINT fk_reservation_customer FOREIGN KEY (custId) REFERENCES Customer(custId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+CREATE TABLE Report (
+    reportId  VARCHAR(20) NOT NULL PRIMARY KEY,
+    type VARCHAR(50),
+    resId  VARCHAR(20),
+    orderId  VARCHAR(20),
+    CONSTRAINT fk_report_reservation FOREIGN KEY (resId) REFERENCES Reservation(resId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    CONSTRAINT fk_report_order FOREIGN KEY (orderId) REFERENCES Orders(orderId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+CREATE TABLE Service (
+    serviceId  VARCHAR(20) NOT NULL PRIMARY KEY,
+    description VARCHAR(255),
+    duration TIME,
+    price DECIMAL(10, 2),
+    availability  VARCHAR(200)
+);
+CREATE TABLE ServiceDetail (
+    serviced VARCHAR(20),                                  -- Foreign key referencing Service(serviceId)
+    resId VARCHAR(20),                                     -- Foreign key referencing Reservation(resId)
+    description VARCHAR(255),                              -- Description of the service
+    CONSTRAINT fk_serviceDetail_service FOREIGN KEY (serviced) REFERENCES Service(serviceId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    CONSTRAINT fk_serviceDetail_reservation FOREIGN KEY (resId) REFERENCES Reservation(resId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Employee (
+    empId VARCHAR(20) NOT NULL PRIMARY KEY,
+    role VARCHAR(100),
+    contactNumber VARCHAR(15),
+    serviced VARCHAR(20),
+    orderId VARCHAR(20),
+    empType VARCHAR(50),
+    startTime TIME,
+    endTime TIME,
+    CONSTRAINT fk_serviced FOREIGN KEY (serviced) REFERENCES ServiceDetail(serviced)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
+    CONSTRAINT fk_order FOREIGN KEY (orderId) REFERENCES Orders(orderId)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+CREATE TABLE User (
+    firstName VARCHAR(100),
+    lastName VARCHAR(100),
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255)
+);

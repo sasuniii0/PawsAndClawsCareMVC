@@ -72,7 +72,7 @@ public class LoginPageController {
             new Alert(Alert.AlertType.WARNING, String.format("User not found (%s)", email)).show();
         }
         // Authenticate user
-        Optional<UserDto> selectedUser = DataBase.userTable.stream()
+        Optional<UserDto> selectedUser = Database.userTable.stream()
                 .filter(e -> e.getEmail().equals(email))
                 .findFirst();
 

@@ -10,8 +10,8 @@ public class Database {
         public static ArrayList<UserDto> userTable= new ArrayList();
         static {
             userTable.add(
-                    new UserDto("Hiruna","Dissanyake",
-                            "hiruna@gmail.com",
+                    new UserDto("Sasuni","Wijerathne",
+                            "sasuni@gmail.com",
                             new PwdManager().encrypt("1234"))
             );
         }
